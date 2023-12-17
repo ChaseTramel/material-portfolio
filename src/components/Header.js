@@ -8,15 +8,25 @@ function Header() {
     ];
 
     return (
-        <AppBar sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center", bgcolor: "#acb0be" }}>
+        <AppBar sx={{ 
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                    bgcolor: "#9ca0b0",
+                    position: "sticky",
+                    width: "100%"
+                }}>
             <Typography 
                 variant="h1" 
                 sx={{
                     textAlign: "center",
                     fontSize: 48,
-                    color: "#7287fd",
+                    color: "white",
                     fontFamily: "Fira Sans",
                     padding: 1,
+                    fontWeight: 1000,
+                    letterSpacing: "1px"
                 }}>
                 Chase Tramel
             </Typography>
@@ -29,7 +39,7 @@ function Header() {
                             color: "#4c4f69",
                             fontFamily: "Fira Sans",
                             fontWeight: 800,
-                            '&:hover': { bgcolor: "#7287fd", color: "white" }  // Corrected hover syntax
+                            '&:hover': { bgcolor: "#7287fd", color: "white" }  
                         }} 
                         key={item.label}
                     >
