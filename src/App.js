@@ -5,7 +5,7 @@ import About from './components/About.js';
 
 function App() {
   return (
-    <Container>
+    <Container sx={{bgcolor: "#eff1f5", height: "100vh"}}>
       <Header />
       <About />
     </Container>

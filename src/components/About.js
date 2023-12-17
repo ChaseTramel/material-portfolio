@@ -11,19 +11,25 @@ function About() {
     ]
 
     return (
-        <Card sx={{padding: 2, marginTop: 3}}>
+        <Card sx={{padding: 2, marginTop: 3, borderRadius: "10px"}}>
             <Typography variant="h2" sx={{fontSize: 40, fontFamily: "Fira Sans"}}>
                 About
             </Typography>
             <Accordion sx={{padding: 2, marginTop: 3, bgcolor: "#ccd0da"}}>
                 <AccordionSummary sx={{fontFamily: "Fira Sans"}} expandIcon={<ExpandMoreIcon />}>
-                    <Typography sx={{color: "#4c4f69"}}>
+                    <Typography sx={{color: "#4c4f69", fontSize: 20}}>
                         I’m Chase Tramel, a web developer and designer. I love creating interesting and useful things with the web.
                     </Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{display: "flex", flexDirection: "column", gap: 3, color: "#4c4f69", fontFamily: "Fira Sans"}}>
+                <AccordionDetails sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: 3,
+                            color: "#4c4f69",
+                            fontFamily: "Fira Sans"
+                        }}>
                     {longAbout.map((item) => (
-                        <Typography>
+                        <Typography sx={{fontSize: 20}}>
                             {item}
                         </Typography>
                     ))}

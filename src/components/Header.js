@@ -15,7 +15,8 @@ function Header() {
                     justifyContent: "center",
                     bgcolor: "#9ca0b0",
                     position: "sticky",
-                    width: "100%"
+                    width: "100%",
+                    borderRadius: "0px 0px 10px 10px"
                 }}>
             <Typography 
                 variant="h1" 
@@ -30,7 +31,11 @@ function Header() {
                 }}>
                 Chase Tramel
             </Typography>
-            <Toolbar sx={{ display: "flex", justifyContent: "center", width: "85%", gap: 1 }}>
+            <Toolbar sx={{ display: "flex",
+                        justifyContent: "center",
+                        width: "85%",
+                        gap: 1
+                    }}>
                 {navItems.map((item) => (
                     <Button 
                         variant="contained" 
