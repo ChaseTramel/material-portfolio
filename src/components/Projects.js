@@ -34,7 +34,7 @@ function Projects() {
     }
 
     return (
-        <Card sx={{
+        <Card id="projects" sx={{
                 padding: 2,
                 marginTop: 3,
                 borderRadius: "10px",
@@ -43,7 +43,7 @@ function Projects() {
                 gap: 3,
                 alignItems: "center"
             }}>
-            <Typography variant="h2" sx={{ fontSize: 40, fontFamily: "Fira Sans" }}>
+            <Typography variant="h2" sx={{ fontSize: 40, fontFamily: "Fira Sans", alignSelf: "flex-start"}}>
                 Projects
             </Typography>
             <Box
@@ -89,13 +89,13 @@ function Projects() {
                 position="static"
                 activeStep={activeStep}
                 nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+                    <Button size="large" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
                         Next
                         <KeyboardArrowRight />
                     </Button>
                 }
                 backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                    <Button size="large" onClick={handleBack} disabled={activeStep === 0}>
                         <KeyboardArrowLeft />
                         Back
                     </Button>

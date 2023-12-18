@@ -11,7 +11,7 @@ function About() {
     ]
 
     return (
-        <Card sx={{padding: 2, marginTop: 3, borderRadius: "10px"}}>
+        <Card  id="about" sx={{padding: 2, marginTop: 3, borderRadius: "10px"}}>
             <Typography variant="h2" sx={{fontSize: 40, fontFamily: "Fira Sans"}}>
                 About
             </Typography>
