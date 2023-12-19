@@ -35,6 +35,7 @@ function About() {
                     ))}
                     <Button 
                         variant="contained" 
+                        href="#contact"
                         sx={{
                             bgcolor: "white", 
                             color: "#4c4f69",
