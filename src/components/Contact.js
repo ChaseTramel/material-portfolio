@@ -1,3 +1,4 @@
+import { Card, Typography } from "@mui/material";
 
 
 
@@ -20,4 +21,13 @@ function Contact() {
         }
     ]
     
+    return (
+        <Card  id="contact" sx={{padding: 2, marginTop: 3, borderRadius: "10px"}}>
+            <Typography variant="h2" sx={{fontSize: 40, fontFamily: "Fira Sans"}}>
+                Contact
+            </Typography>
+        </Card>
+    )
 }
+
+export default Contact;

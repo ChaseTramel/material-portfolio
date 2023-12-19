@@ -6,7 +6,7 @@ function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const threshold = 25; // hides title at this threshold
+            const threshold = 5; // hides title at this threshold
             setShowTitle(window.scrollY < threshold);
         }
         window.addEventListener("scroll", handleScroll);
