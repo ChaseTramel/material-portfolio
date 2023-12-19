@@ -3,25 +3,29 @@ import { Button, Card, MobileStepper, Typography, Box } from "@mui/material";
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 
-const projects = [
-    {
-        label: "Christmas Magic",
-        imagePath: "/magic.gif",
-        why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien tortor, laoreet vel ex ac, consectetur lobortis mauris. Nunc faucibus orci vel euismod suscipit. Integer ullamcorper ipsum orci, ac pulvinar turpis dignissim ac. Nunc sed libero mi.",
-        how: "Integer vel turpis quis est pulvinar elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque lacus lorem, molestie ac ante ac, convallis semper eros. Fusce erat elit, sollicitudin id feugiat sed, interdum nec leo.",
-        whatNext: "Duis dui felis, sagittis id elit sed, rutrum tincidunt purus. Nunc eget enim magna. Praesent vel eros dolor. In metus lorem, consequat vitae ex condimentum, feugiat pharetra enim. In turpis neque, ultricies molestie mi vel, rhoncus commodo mi."
-    },
-    {
-        label: "LinkTree Clone",
-        imagePath: "/linktree.png",
-        why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien tortor, laoreet vel ex ac, consectetur lobortis mauris. Nunc faucibus orci vel euismod suscipit. Integer ullamcorper ipsum orci, ac pulvinar turpis dignissim ac. Nunc sed libero mi.",
-        how: "Integer vel turpis quis est pulvinar elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque lacus lorem, molestie ac ante ac, convallis semper eros. Fusce erat elit, sollicitudin id feugiat sed, interdum nec leo.",
-        whatNext: "Duis dui felis, sagittis id elit sed, rutrum tincidunt purus. Nunc eget enim magna. Praesent vel eros dolor. In metus lorem, consequat vitae ex condimentum, feugiat pharetra enim. In turpis neque, ultricies molestie mi vel, rhoncus commodo mi."
-    
-    }
-];
+
 
 function Projects() {
+    const projects = [
+        {
+            label: "Christmas Magic",
+            imagePath: "/magic.gif",
+            url: "https://github.com/ChaseTramel/second-life-scripts/tree/main/Christmas-Magic-Scripts",
+            why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien tortor, laoreet vel ex ac, consectetur lobortis mauris. Nunc faucibus orci vel euismod suscipit. Integer ullamcorper ipsum orci, ac pulvinar turpis dignissim ac. Nunc sed libero mi.",
+            how: "Integer vel turpis quis est pulvinar elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque lacus lorem, molestie ac ante ac, convallis semper eros. Fusce erat elit, sollicitudin id feugiat sed, interdum nec leo.",
+            whatNext: "Duis dui felis, sagittis id elit sed, rutrum tincidunt purus. Nunc eget enim magna. Praesent vel eros dolor. In metus lorem, consequat vitae ex condimentum, feugiat pharetra enim. In turpis neque, ultricies molestie mi vel, rhoncus commodo mi."
+        },
+        {
+            label: "LinkTree Clone",
+            imagePath: "/linktree.png",
+            url: "https://kaseylittlepaws.com/",
+            why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien tortor, laoreet vel ex ac, consectetur lobortis mauris. Nunc faucibus orci vel euismod suscipit. Integer ullamcorper ipsum orci, ac pulvinar turpis dignissim ac. Nunc sed libero mi.",
+            how: "Integer vel turpis quis est pulvinar elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque lacus lorem, molestie ac ante ac, convallis semper eros. Fusce erat elit, sollicitudin id feugiat sed, interdum nec leo.",
+            whatNext: "Duis dui felis, sagittis id elit sed, rutrum tincidunt purus. Nunc eget enim magna. Praesent vel eros dolor. In metus lorem, consequat vitae ex condimentum, feugiat pharetra enim. In turpis neque, ultricies molestie mi vel, rhoncus commodo mi."
+        
+        }
+    ];
+
     const [activeStep, setActiveStep] = useState(0);
     const maxSteps = projects.length;
 
@@ -58,7 +62,7 @@ function Projects() {
                 alt={projects[activeStep].label}
             />
             <Typography variant="h3" sx={{ fontSize: 24, fontFamily: "Fira Sans" }}>
-                {projects[activeStep].label}
+                <a href={projects[activeStep].url}>{projects[activeStep].label}</a>
             </Typography>
             <div>
                 <Typography variant="h4" sx={{ fontSize: 20, fontFamily: "Fira Sans" }}>
