@@ -3,12 +3,15 @@ import { useState, useEffect } from "react";
 
 function Header() {
     const [showTitle, setShowTitle] = useState(true);
+    const [titleOpacity, setTitleOpacity] = useState(1);
 
     useEffect(() => {
         const handleScroll = () => {
-            const threshold = 5; // hides title at this threshold
-            setShowTitle(window.scrollY < threshold);
-        }
+            const threshold = 5;
+            const isAboveThreshold = window.scrollY < threshold;
+            setShowTitle(isAboveThreshold);
+            setTitleOpacity(isAboveThreshold ? 1 : 0);
+        };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -33,9 +36,10 @@ function Header() {
                 }}>
             
                 <Container sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "center"
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: showTitle ? 'center' : 'center', // Center if title is not shown
+                    alignItems: 'center'
                 }}>
                     <Box
                         component="img"
@@ -44,10 +48,11 @@ function Header() {
                             maxWidth: 75,
                             overflow: 'hidden',
                             width: '100%',
+                            transform: showTitle ? "none" : "translateX(200%)",
+                            transition: "transform 0.25s ease-in-out"
                         }}
                         src="/logo512.png"
                     />
-                    {showTitle && (
                     <Typography 
                         variant="h1" 
                         sx={{
@@ -58,12 +63,12 @@ function Header() {
                             padding: 1,
                             fontWeight: 1000,
                             letterSpacing: "1px",
-                            display: "flex"
+                            display: "flex",
+                            opacity: titleOpacity,
+                            transition: "opacity 0.25s ease-in-out",
                         }}>
-                        
                         Chase Tramel
                     </Typography>
-                    )}
                 </Container>
             <Toolbar sx={{ display: "flex",
                         justifyContent: "center",

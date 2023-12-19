@@ -26,7 +26,7 @@ function Contact() {
             <Typography variant="h2" sx={{fontSize: 40, fontFamily: "Fira Sans"}}>
                 Contact
             </Typography>
-            <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+            <Box sx={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap" }}>
                 {contactInfo.map((item, index) => (
                     <Button
                         key={index}
