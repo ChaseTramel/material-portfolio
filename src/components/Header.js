@@ -1,4 +1,4 @@
-import { AppBar, Button, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, Toolbar, Typography, Box, Container } from "@mui/material";
 import { useState, useEffect } from "react";
 
 function Header() {
@@ -31,21 +31,40 @@ function Header() {
                     width: "100%",
                     borderRadius: "0px 0px 10px 10px"
                 }}>
-            {showTitle && (
-                <Typography 
-                    variant="h1" 
-                    sx={{
-                        textAlign: "center",
-                        fontSize: 48,
-                        color: "white",
-                        fontFamily: "Fira Sans",
-                        padding: 1,
-                        fontWeight: 1000,
-                        letterSpacing: "1px"
-                    }}>
-                    Chase Tramel
-                </Typography>
-            )}
+            
+                <Container sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center"
+                }}>
+                    <Box
+                        component="img"
+                        sx={{
+                            display: 'block',
+                            maxWidth: 75,
+                            overflow: 'hidden',
+                            width: '100%',
+                        }}
+                        src="/logo512.png"
+                    />
+                    {showTitle && (
+                    <Typography 
+                        variant="h1" 
+                        sx={{
+                            textAlign: "center",
+                            fontSize: 48,
+                            color: "white",
+                            fontFamily: "Fira Sans",
+                            padding: 1,
+                            fontWeight: 1000,
+                            letterSpacing: "1px",
+                            display: "flex"
+                        }}>
+                        
+                        Chase Tramel
+                    </Typography>
+                    )}
+                </Container>
             <Toolbar sx={{ display: "flex",
                         justifyContent: "center",
                         width: "85%",
