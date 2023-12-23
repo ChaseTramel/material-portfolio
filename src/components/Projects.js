@@ -11,17 +11,17 @@ function Projects() {
             label: "Christmas Magic",
             imagePath: "/magic.gif",
             url: "https://github.com/ChaseTramel/second-life-scripts/tree/main/Christmas-Magic-Scripts",
-            why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien tortor, laoreet vel ex ac, consectetur lobortis mauris. Nunc faucibus orci vel euismod suscipit. Integer ullamcorper ipsum orci, ac pulvinar turpis dignissim ac. Nunc sed libero mi.",
-            how: "Integer vel turpis quis est pulvinar elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque lacus lorem, molestie ac ante ac, convallis semper eros. Fusce erat elit, sollicitudin id feugiat sed, interdum nec leo.",
-            whatNext: "Duis dui felis, sagittis id elit sed, rutrum tincidunt purus. Nunc eget enim magna. Praesent vel eros dolor. In metus lorem, consequat vitae ex condimentum, feugiat pharetra enim. In turpis neque, ultricies molestie mi vel, rhoncus commodo mi."
+            why: "To create a fun and interactive magical Christmas effects for my character in the game Second Life.",
+            how: "Linden Scripting Language (LSL), Firestorm Preprocessor, Git & GitHub.",
+            whatNext: "I would like to add more effects and make the scripts more efficient."
         },
         {
             label: "LinkTree Clone",
             imagePath: "/linktree.png",
             url: "https://kaseylittlepaws.com/",
-            why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien tortor, laoreet vel ex ac, consectetur lobortis mauris. Nunc faucibus orci vel euismod suscipit. Integer ullamcorper ipsum orci, ac pulvinar turpis dignissim ac. Nunc sed libero mi.",
-            how: "Integer vel turpis quis est pulvinar elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque lacus lorem, molestie ac ante ac, convallis semper eros. Fusce erat elit, sollicitudin id feugiat sed, interdum nec leo.",
-            whatNext: "Duis dui felis, sagittis id elit sed, rutrum tincidunt purus. Nunc eget enim magna. Praesent vel eros dolor. In metus lorem, consequat vitae ex condimentum, feugiat pharetra enim. In turpis neque, ultricies molestie mi vel, rhoncus commodo mi."
+            why: "To advertise my freelance scripting services in the game Second Life.",
+            how: "React, PrimeReact, Git & GitHub, Netlify.",
+            whatNext: "I'd like to make the buttons their own components. I'm thinking about starting a blog on the site, but that may be better suited as a separate project."
         
         }
     ];
@@ -45,9 +45,9 @@ function Projects() {
                 display: "flex",
                 flexDirection: "column",
                 gap: 3,
-                alignItems: "center"
+                alignItems: "flex-start"
             }}>
-            <Typography variant="h2" sx={{ fontSize: 40, fontFamily: "Fira Sans", alignSelf: "flex-start"}}>
+            <Typography variant="h2" sx={{ fontSize: 40, fontFamily: "Fira Sans"}}>
                 Projects
             </Typography>
             <Box
@@ -57,11 +57,12 @@ function Projects() {
                     maxWidth: 400,
                     overflow: 'hidden',
                     width: '100%',
+                    alignSelf: 'center'
                 }}
                 src={projects[activeStep].imagePath}
                 alt={projects[activeStep].label}
             />
-            <Typography variant="h3" sx={{ fontSize: 24, fontFamily: "Fira Sans" }}>
+            <Typography variant="h3" sx={{ fontSize: 24, fontFamily: "Fira Sans", alignSelf: "center" }}>
                 <a href={projects[activeStep].url}>{projects[activeStep].label}</a>
             </Typography>
             <div>
@@ -89,6 +90,7 @@ function Projects() {
                 </Typography>
             </div>
             <MobileStepper
+                sx={{alignSelf: "center"}}
                 steps={maxSteps}
                 position="static"
                 activeStep={activeStep}
